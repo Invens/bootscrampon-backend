@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trek_infos",
+  "info": {
+    "singularName": "trek-info",
+    "pluralName": "trek-infos",
+    "displayName": "Trek_info"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trek": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trek.trek",
+      "inversedBy": "trek_info"
+    },
+    "Food_Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Food_description": {
+      "type": "text"
+    },
+    "accomodation_image": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Accommodation_Description": {
+      "type": "text"
+    },
+    "Fitness_Image": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Fitness_Description": {
+      "type": "text"
+    }
+  }
+}

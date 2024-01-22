@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "upcomming_treks",
+  "info": {
+    "singularName": "upcomming-trek",
+    "pluralName": "upcomming-treks",
+    "displayName": "Upcomming_trek"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

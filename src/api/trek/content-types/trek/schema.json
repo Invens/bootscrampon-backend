@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "treks",
+  "info": {
+    "singularName": "trek",
+    "pluralName": "treks",
+    "displayName": "Trek"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Duration": {
+      "type": "string",
+      "required": true
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Difficulty_Level": {
+      "type": "string"
+    },
+    "Altitude": {
+      "type": "string"
+    },
+    "Overview": {
+      "type": "text"
+    },
+    "videos": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "trek_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trek-info.trek-info",
+      "mappedBy": "trek"
+    },
+    "highlight": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::highlight.highlight",
+      "mappedBy": "trek"
+    },
+    "thingstopack": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::thingstopack.thingstopack",
+      "mappedBy": "trek"
+    },
+    "inclusions_exclusion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inclusions-exclusion.inclusions-exclusion",
+      "mappedBy": "trek"
+    },
+    "faq": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq.faq",
+      "mappedBy": "trek"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inclusions_exclusions",
+  "info": {
+    "singularName": "inclusions-exclusion",
+    "pluralName": "inclusions-exclusions",
+    "displayName": "Inclusions/Exclusion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trek": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trek.trek",
+      "inversedBy": "inclusions_exclusion"
+    },
+    "Points": {
+      "type": "text"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
